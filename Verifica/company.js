@@ -4,7 +4,10 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
+/*tre route*/
 var webRouter = require('./routes/web');
+var new_comp_Router = require('./routes/new_comp');
+
 
 var app = express();
 
@@ -16,5 +19,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/web', webRouter);
+app.use('/new_comp', new_comp_Router);
 
 module.exports = app;

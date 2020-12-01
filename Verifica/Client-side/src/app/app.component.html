@@ -1,0 +1,11 @@
+<button class="btn btn-primary" (click)="getwebcompanies()">CompanyWebCategories</button>
+
+<div class="card-columns">
+  <div *ngFor="let c of results" class="card">
+  <img class="card-img-top" [src]="photoURL(c.image)">
+    <div class="card-body text-center">
+    <h1 class="card-title">{{c.name}}</h1>
+    <p class="card-text">{{c.overview}}</p>
+    </div>
+  </div>
+</div>
